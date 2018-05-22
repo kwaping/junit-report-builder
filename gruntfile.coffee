@@ -1,5 +1,5 @@
 module.exports = (grunt) ->
-  require('jit-grunt')(grunt)
+  require('load-grunt-tasks')(grunt);
 
   require('time-grunt')(grunt) if grunt.option 'time'
 

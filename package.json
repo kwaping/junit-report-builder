@@ -28,7 +28,7 @@
     "grunt-contrib-watch": "^1.1.0",
     "grunt-jasmine-nodejs": "1.4.0",
     "grunt-release": "^0.14.0",
-    "jit-grunt": "^0.9.1",
+    "load-grunt-tasks": "^4.0.0",
     "rimraf": "^2.3.3",
     "time-grunt": "^1.2.1"
   },
