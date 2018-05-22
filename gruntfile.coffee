@@ -4,19 +4,21 @@ module.exports = (grunt) ->
   require('time-grunt')(grunt) if grunt.option 'time'
 
   grunt.initConfig
-    jasmine_nodejs:
+    jasmine_node:
       options:
-        specNameSuffix: ['Spec.js', 'Spec.coffee']
-      test:
-        specs: ['spec/**']
+        coffee: true
+        useCoffee: true
+        extensions: 'coffee'
+        specNameMatcher: 'Spec'
+      test: ['spec/']
     watch:
       javaScript:
-        files: ['src/**/*.js', 'spec/**/*.js']
+        files: ['src/**/*.js', 'spec/**/*.js', 'gruntfile.coffee']
         tasks: ['jshint', 'test']
         options:
           atBegin: true
       coffeeScript:
-        files: ['spec/**/*.coffee']
+        files: ['spec/**/*.coffee', 'gruntfile.coffee']
         tasks: ['test']
       config:
         files: ['gruntfile.coffee']
@@ -29,5 +31,5 @@ module.exports = (grunt) ->
       javaScript: ['src/**/*.js', 'spec/**/*.js']
 
   grunt.registerTask 'default', ['jshint', 'test']
-  grunt.registerTask 'test', ['jasmine_nodejs:test']
+  grunt.registerTask 'test', ['jasmine_node']
   grunt.registerTask 'tdd', ['watch']

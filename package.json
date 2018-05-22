@@ -26,7 +26,7 @@
     "grunt": "^1.0.2",
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-jasmine-nodejs": "1.4.0",
+    "grunt-jasmine-node": "^0.3.1",
     "grunt-release": "^0.14.0",
     "load-grunt-tasks": "^4.0.0",
     "rimraf": "^2.3.3",
@@ -34,6 +34,8 @@
   },
   "dependencies": {
     "date-format": "0.0.2",
+    "jasmine": "^3.1.0",
+    "jasmine-node": "^1.14.5",
     "lodash": "^4.17.10",
     "mkdirp": "^0.5.0",
     "xmlbuilder": "^10.0.0"
